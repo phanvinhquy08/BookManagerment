@@ -5,7 +5,7 @@ const controller = require("../controller/users.controller");
 const validate = require("../validate/users.validate");
 const authMiddleware = require("../middleware/auth.middleware")
 
-router.get('/', authMiddleware.requireAuth, controller.index);
+router.get('/', authMiddleware.requireAuth, authMiddleware.requireAdmin, controller.index);
 router.get('/add', controller.add);
 router.get('/edit/:id', controller.edit)
 router.post('/add', validate.postAdd, controller.postAdd)

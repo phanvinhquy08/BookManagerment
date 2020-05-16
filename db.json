@@ -31,19 +31,22 @@
       "id": "GAfAQvUML",
       "name": "Phan Vĩnh Quý",
       "email": "Quy.120993@gmail.com",
-      "password": "123"
+      "password": "202cb962ac59075b964b07152d234b70",
+      "position": "admin"
     },
     {
       "id": "hBaiyZTvz",
       "name": "Phan Thanh Hồng",
       "email": "Hotel2@mail.com",
-      "password": "111"
+      "password": "698d51a19d8a121ce581499d7b701668",
+      "position": "member"
     },
     {
       "id": "BHEYqhGOA",
       "name": "Ngô Thị Mỹ Lệ",
       "email": "phanvinhquy08@yahoo.com",
-      "password": "123456"
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "position": "member"
     }
   ],
   "transactions": [
@@ -51,6 +54,36 @@
       "id": "r4bEyN622",
       "user": "Phan Vĩnh Quý",
       "book": "sách A",
+      "isComplete": false
+    },
+    {
+      "id": "8kwlvc_m_",
+      "user": "Phan Thanh Hồng",
+      "book": "sách B",
+      "isComplete": false
+    },
+    {
+      "id": "TeWO1L_7g",
+      "user": "Phan Thanh Hồng",
+      "book": "sách F",
+      "isComplete": false
+    },
+    {
+      "id": "p14r1psZD",
+      "user": "Ngô Thị Mỹ Lệ",
+      "book": "sách 123",
+      "isComplete": false
+    },
+    {
+      "id": "kCPVqyrtE",
+      "user": "Ngô Thị Mỹ Lệ",
+      "book": "sách B",
+      "isComplete": false
+    },
+    {
+      "id": "6esmk3EGS",
+      "user": "Ngô Thị Mỹ Lệ",
+      "book": "sách ABCD",
       "isComplete": false
     }
   ],

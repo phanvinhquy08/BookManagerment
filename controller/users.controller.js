@@ -15,8 +15,7 @@ module.exports.edit = (req, res) => {
 }
 module.exports.postAdd = (req, res) => {
     const { name, email, password } = req.body;
-    console.log(res.locals)
-    db.get("users").push({ id: shortid.generate(), name, email, password }).write();
+    db.get("users").push({ id: shortid.generate(), name, email, password, position: "member" }).write();
     res.redirect("/users")
 }
 module.exports.postEdit = (req, res) => {
