@@ -1,0 +1,21 @@
+extends ../layout/commonLayout
+block content  
+  h2 TRANSACTIONS
+  a(href="/transactions/add") Add new transaction
+  table(class="table")
+    thead
+      tr
+        th ID
+        th Name
+        th Book
+        th Status
+        th Action
+    tbody
+      each transaction in transactions
+        tr
+          td=transaction.id
+          td=transaction.user
+          td=transaction.book
+          td=transaction.isComplete
+          td
+            a(href="/transactions/" + transaction.id +"/complete") Hoàn thành

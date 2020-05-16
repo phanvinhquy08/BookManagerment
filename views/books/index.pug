@@ -1,0 +1,20 @@
+extends ../layout/commonLayout
+block content  
+  h2 LIST OF BOOK 
+  a(href="/books/add") Add new book
+  table(class="table")
+    thead
+      tr
+        th Title
+        th Description
+        th  Action
+    tbody
+      each book in books
+        tr
+          td=book.title
+          td=book.description
+          td
+            a(href="/books/edit/" + book.id) Edit
+            a(href="/books/delete/" + book.id) Delete
+
+            

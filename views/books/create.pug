@@ -1,0 +1,11 @@
+extends ../layout/commonLayout
+block content    
+    h1 Add New Book
+    form(action="/books/add", method="POST")
+        div(class="form-group")
+            label(for="title") Title
+            input(type="text", name="title", playholder="title", class="form-control")
+        div(class="form-group")
+            label(for="description") Description
+            input(type="text", name="description" playholder="description", class="form-control")
+        button(class="btn btn-primary") Add new

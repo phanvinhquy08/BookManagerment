@@ -1,0 +1,12 @@
+extends ../layout/commonLayout
+block content
+    h2 TRẠNG THÁI MƯỢN SÁCH
+    p=transaction.id
+    p=transaction.user
+    p=transaction.book
+    form(action="/transactions/" + transaction.id + "/complete" , method="POST")
+        input(type="checkbox", name="status")
+        label(for="status") Hoàn thành
+        span &nbsp;
+        button(class="btn btn-primary") Xác nhận
+

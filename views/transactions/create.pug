@@ -1,0 +1,13 @@
+extends ../layout/commonLayout
+block content    
+    h1 Add New Transaction
+    form(action="/transactions/add", method="POST")
+        div(class="form-group")
+            select(name='user', id='' ,class="form-control")
+                each user in users
+                    option=user.name
+        div(class="form-group")
+            select(name='book', id='',class="form-control")
+                each book in books
+                    option=book.title
+        button(class="btn btn-primary") Add new
