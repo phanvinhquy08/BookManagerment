@@ -10,7 +10,7 @@ module.exports.add = (req, res) => {
 }
 module.exports.delete = (req, res) => {
     const id = req.params.id;
-    db.get("books").remove({ id }).value();
+    db.get("books").remove({ id }).write();
     res.redirect("/books")
 }
 module.exports.edit = (req, res) => {

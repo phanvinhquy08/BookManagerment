@@ -2,5 +2,19 @@ html
     head
         link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
     body
-        div(class="container")
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            a.navbar-brand(href='#') Library
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                    li.nav-item
+                        a.nav-link(href='/books') Books
+                    li.nav-item
+                        a.nav-link(href='/users') Users
+                    li.nav-item
+                        a.nav-link(href='/transactions') Transactions
+                    li.nav-item
+                        a.nav-link(href='/auth/login') Login
+        div(class="container py-5")
             block content

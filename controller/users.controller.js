@@ -14,8 +14,9 @@ module.exports.edit = (req, res) => {
     res.render('users/edit', { user })
 }
 module.exports.postAdd = (req, res) => {
-    const { name } = req.body;
-    db.get("users").push({ id: shortid.generate(), name }).write();
+    const { name, email, password } = req.body;
+    console.log(res.locals)
+    db.get("users").push({ id: shortid.generate(), name, email, password }).write();
     res.redirect("/users")
 }
 module.exports.postEdit = (req, res) => {
@@ -26,6 +27,6 @@ module.exports.postEdit = (req, res) => {
 }
 module.exports.delete = (req, res) => {
     const id = req.params.id;
-    db.get("users").remove({id}).value();
+    db.get("users").remove({ id }).write();
     res.redirect("/users")
 }
