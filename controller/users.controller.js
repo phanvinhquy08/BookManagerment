@@ -1,3 +1,4 @@
+const bcrypt = require('bcrypt');
 const db = require("../db");
 const shortid = require("shortid");
 
@@ -15,7 +16,11 @@ module.exports.edit = (req, res) => {
 }
 module.exports.postAdd = (req, res) => {
     const { name, email, password } = req.body;
-    db.get("users").push({ id: shortid.generate(), name, email, password, position: "member" }).write();
+    bcrypt.hash(password, 10, function (err, hash) {
+        // Store hash in database
+        db.get("users").push({ id: shortid.generate(), name, email, password: hash, position: "member" }).write();
+    });
+
     res.redirect("/users")
 }
 module.exports.postEdit = (req, res) => {

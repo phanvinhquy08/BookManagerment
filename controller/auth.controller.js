@@ -1,4 +1,4 @@
-const md5 = require("md5");
+const bcrypt = require('bcrypt');
 const db = require("../db");
 
 module.exports.login = (req, res, next) => {
@@ -29,13 +29,25 @@ module.exports.postLogin = (req, res, next) => {
         })
         return;
     }
-    if(user.password !== md5(password)) {
-        res.render("auth/index", {
-            errors: ["Wrong password"],
-            values: req.body
-        })
-        return;
-    }
-    res.cookie("userId", user.id);
-    res.redirect("/");
+    bcrypt.compare(password, user.password, function(err, result) {
+        if(result) {
+            res.cookie("userId", user.id);
+            res.redirect("/");
+        }
+        else {
+            db.update("loginCount", n => n + 1).write();
+            if(db.get("loginCount").value() >= 4) {
+                res.render("auth/index", {
+                    errors: ["You had login fall 4 times"],
+                    values: req.body
+                })
+            }
+            res.render("auth/index", {
+                errors: ["Wrong password"],
+                values: req.body
+            })
+            return;
+        }
+    });
+
 }

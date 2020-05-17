@@ -28,25 +28,25 @@
   ],
   "users": [
     {
-      "id": "GAfAQvUML",
+      "id": "XIdJzzSoF",
+      "name": "Ngô Thị Mỹ Lệ",
+      "email": "Hotel2@mail.com",
+      "password": "$2b$10$4qm0vPjuk4H3DVdzMfFcdu7gYnD/s/Wc9y/nnzzRPnBUPCnaiXVJa",
+      "position": "member"
+    },
+    {
+      "id": "ais5oTAT0",
+      "name": "Phan Thanh Hồng",
+      "email": "phanvinhquy08@yahoo.com",
+      "password": "$2b$10$Y3uCbwMqQbuz9LjrxphIa.GmlT/hPCNe7GI7CNw7Ge3esIKorcire",
+      "position": "member"
+    },
+    {
+      "id": "XgZrqvGpx",
       "name": "Phan Vĩnh Quý",
       "email": "Quy.120993@gmail.com",
-      "password": "202cb962ac59075b964b07152d234b70",
+      "password": "$2b$10$Cd5skfkM8sbEGhoK2IdPauZhiOTsvuAUnNq01yHhN5lY1pIGyaEye",
       "position": "admin"
-    },
-    {
-      "id": "hBaiyZTvz",
-      "name": "Phan Thanh Hồng",
-      "email": "Hotel2@mail.com",
-      "password": "698d51a19d8a121ce581499d7b701668",
-      "position": "member"
-    },
-    {
-      "id": "BHEYqhGOA",
-      "name": "Ngô Thị Mỹ Lệ",
-      "email": "phanvinhquy08@yahoo.com",
-      "password": "e10adc3949ba59abbe56e057f20f883e",
-      "position": "member"
     }
   ],
   "transactions": [
@@ -87,5 +87,6 @@
       "isComplete": false
     }
   ],
-  "cookieCount": 2
+  "cookieCount": 2,
+  "loginCount": 0
 }
